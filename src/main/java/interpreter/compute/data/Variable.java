@@ -2,7 +2,6 @@ package interpreter.compute.data;
 
 import interpreter.compute.infrastructure.Assignable;
 import interpreter.compute.infrastructure.Formula;
-import org.jetbrains.annotations.Nullable;
 
 import java.util.*;
 

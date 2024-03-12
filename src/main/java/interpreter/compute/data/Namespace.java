@@ -8,7 +8,6 @@ import interpreter.compute.infrastructure.Assignable;
 import interpreter.compute.infrastructure.Formula;
 import interpreter.logic.data.LogicalLine;
 import interpreter.logic.infrastructure.LogicalData;
-import org.jetbrains.annotations.Nullable;
 
 import java.util.HashMap;
 import java.util.Set;
@@ -17,13 +16,13 @@ public class Namespace {
     public final HashMap<String, Function> FUNCTIONS;
     public final HashMap<String, Variable> STATIC_VARS;
     public final HashMap<String, Assignable> INSTANT_VARS;
-    @Nullable private Namespace parent;
+    private Namespace parent;
 
     public Namespace() {
         this(null);
     }
 
-    public Namespace(@Nullable Namespace parent) {
+    public Namespace(Namespace parent) {
         FUNCTIONS = new HashMap<>();
         STATIC_VARS = new HashMap<>();
         INSTANT_VARS = new HashMap<>();
@@ -35,7 +34,7 @@ public class Namespace {
         }
     }
 
-    public @Nullable Namespace parent() {
+    public Namespace parent() {
         return parent;
     }
 
@@ -73,7 +72,7 @@ public class Namespace {
         return function;
     }
 
-    public @Nullable Function createFunctionInstance(String codec) {
+    public Function createFunctionInstance(String codec) {
         if(FUNCTIONS.containsKey(codec))
             return FUNCTIONS.get(codec).clone(this);
         return null;

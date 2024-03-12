@@ -3,7 +3,6 @@ package interpreter.compute.data;
 import interpreter.compute.infrastructure.Assignable;
 import interpreter.compute.infrastructure.Formula;
 import interpreter.compute.exceptions.FormulaSynatxError;
-import org.jetbrains.annotations.Nullable;
 
 import java.util.HashMap;
 import java.util.List;

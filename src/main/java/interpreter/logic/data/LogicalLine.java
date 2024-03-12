@@ -11,7 +11,6 @@ import interpreter.logic.infrastructure.LogicalOperator;
 import interpreter.logic.operations.BoolType;
 import interpreter.logic.operations.MathType;
 
-import org.jetbrains.annotations.Nullable;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;

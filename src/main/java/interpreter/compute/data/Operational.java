@@ -4,7 +4,6 @@ import interpreter.compute.exceptions.FormulaSynatxError;
 import interpreter.compute.infrastructure.Assignable;
 import interpreter.compute.infrastructure.Formula;
 import interpreter.compute.exceptions.FormulaOperationError;
-import org.jetbrains.annotations.Nullable;
 
 import java.util.HashMap;
 import java.util.List;
