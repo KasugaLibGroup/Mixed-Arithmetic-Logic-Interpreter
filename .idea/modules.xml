@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/MixedArithmeticLogicInterpreter.iml" filepath="$PROJECT_DIR$/MixedArithmeticLogicInterpreter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Mixed-Arithmetic-Logic-Interpreter.iml" filepath="$PROJECT_DIR$/Mixed-Arithmetic-Logic-Interpreter.iml" />
     </modules>
   </component>
 </project>
