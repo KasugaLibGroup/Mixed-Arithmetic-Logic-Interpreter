@@ -39,7 +39,7 @@
                 <version>2.8.2</version>
                 <configuration>
                     <altDeploymentRepository>
-                        internal.repo::default::file://${project.build.directory}/mvn-repo
+                        internal.repo::default::file://${project.build.directory}/mali
                     </altDeploymentRepository>
                 </configuration>
             </plugin>
@@ -50,8 +50,8 @@
                 <configuration>
                     <message>Maven artifacts for ${project.version}</message>
                     <noJekyll>true</noJekyll>
-                    <outputDirectory>${project.build.directory}/mvn-repo</outputDirectory>
-                    <branch>refs/heads/mvn-repo</branch>
+                    <outputDirectory>${project.build.directory}/mali</outputDirectory>
+                    <branch>refs/heads/mali</branch>
                     <includes>
                         <include>**/*</include>
                     </includes>
