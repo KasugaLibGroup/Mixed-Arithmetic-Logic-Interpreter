@@ -31,3 +31,6 @@
 
 ### 命名空间
   - 支持特异化计算需求。
+
+# Maven Repo
+  - see : https://github.com/MegumiKasuga/kasuga-maven
