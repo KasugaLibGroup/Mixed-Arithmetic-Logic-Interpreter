@@ -24,7 +24,7 @@ public class TripleParamFunction extends Function {
 
     @Override
     public Function clone(Namespace newNamespace) {
-        return new TripleParamFunction(this.codec, namespace, this.computer);
+        return new TripleParamFunction(this.codec, newNamespace, this.computer);
     }
 
     public interface Computer {
