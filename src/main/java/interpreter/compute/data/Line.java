@@ -10,10 +10,7 @@ import interpreter.compute.infrastructure.Formula;
 import interpreter.compute.infrastructure.Pretreatable;
 
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -77,7 +74,7 @@ public class Line implements Formula, Assignable, Pretreatable {
     }
 
     private void dealLeveledOperation(ArrayList<Formula> formulas, String... operations) {
-        ArrayList<Integer> indexList = getOperationsIndex(formulas, operations);
+        LinkedList<Integer> indexList = getOperationsIndex(formulas, operations);
         int offset = 0;
         for (int index : indexList) {
             Operational opt = (Operational) formulas.get(index - offset);
@@ -89,8 +86,8 @@ public class Line implements Formula, Assignable, Pretreatable {
         }
     }
 
-    private ArrayList<Integer> getOperationsIndex(List<Formula> elements, String... type) {
-        ArrayList<Integer> result = new ArrayList<>();
+    private LinkedList<Integer> getOperationsIndex(List<Formula> elements, String... type) {
+        LinkedList<Integer> result = new LinkedList<>();
         int counter = 0;
         for(Formula formula : elements) {
             counter++;
@@ -129,7 +126,7 @@ public class Line implements Formula, Assignable, Pretreatable {
                 }
             }
         }
-        ArrayList<Integer> minusGroup = getOperationsIndex(elements, "-");
+        LinkedList<Integer> minusGroup = getOperationsIndex(elements, "-");
         ArrayList<Integer> markRemove = new ArrayList<>();
         for(Integer index : minusGroup) {
             Formula formula = elements.get(index + 1);

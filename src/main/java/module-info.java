@@ -1,4 +1,6 @@
 module Mixed.Arithmetic.Logic.Interpreter {
+    requires com.google.common;
+    requires jsr305;
     exports interpreter;
 
     exports interpreter.compute.data;
